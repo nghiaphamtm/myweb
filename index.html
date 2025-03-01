@@ -2,77 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Band</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Interactive Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    <div id="main">
-        <div id="header">
-            <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
-                <li>
-                    <a href="">More</a>
-                    <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div id="slider">
-
-        </div>
-
-        <div id="content">
-
-        </div>
-
-        <div id="footer">
-              <div id="slider">
-
-        </div>
-
-        <div id="content">
-
-        </div>
-
-        <div id="footer">
-            
-        </div>
-    </div>  <div id="slider">
-
-        </div>
-
-        <div id="content">
-
-        </div>
-
-        <div id="footer">
-            
-        </div>
-    </div>  <div id="slider">
-
-        </div>
-
-        <div id="content">
-
-        </div>
-
-        <div id="footer">
-            
-        </div>
+    <div class="container">
+        <h1>Welcome to My Interactive Webpage</h1>
+        <p>Enter your name below and click the button:</p>
+        <input type="text" id="nameInput" placeholder="Your name here" />
+        <button onclick="displayMessage()">Submit</button>
+        <p id="output"></p>
     </div>
-            
-        </div>
-    </div>
-
-
+    
+    <script>
+        function displayMessage() {
+            const name = document.getElementById('nameInput').value;
+            const output = document.getElementById('output');
+            if (name) {
+                output.innerText = `Hello, ${name}! Welcome to my webpage.`;
+            } else {
+                output.innerText = "Please enter your name.";
+            }
+        }
+    </script>
 </body>
 </html>
